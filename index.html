@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<title>Of Course</title>
+		<link rel="shortcut icon" href="img/favicon.png" />
+		<!-- Google -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Fonte Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Personalização -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <link type="text/css" rel="stylesheet" href="css/index.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+        
+    </head>
+	<body>
+
+		<!-- Header -->
+		<header id="header" class="transparent-nav">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/logo-alt.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<!-- Navegação -->
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.html">Início</a></li>
+						<li><a href="index.html#courses">Cursos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+                        <li><a href="login.html">Login</a></li>
+					</ul>
+				</nav>
+				<!-- /Navegação -->
+
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Home -->
+		<div id="home" class="hero-area">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/wallpaper.jpg)"><p></p></div>
+			<!-- /Backgound Image -->
+
+			<div class="home-wrapper">
+				<div class="container">
+					<div class="row">
+						<!--
+                        <div id="sb-search" class="sb-search ">
+                                <form>
+                                    <input class="sb-search-input" onkeyup="buttonUp();" placeholder="O que deseja aprender hoje?" onblur="monkey();" type="search" value="" name="search" id="search">
+                                    <input class="sb-search-submit" type="submit" value="">
+                                    <span class="sb-icon-search"><i class="fa fa-search"></i></span>
+                                </form>
+                        </div>
+						--> 
+						<div class="col-md-8">
+							<h1 class="white-text">OfCourse - Plataforma de Estudo </h1>
+							<p class="lead white-text">Aqui você aprende de um jeito diferente.</p>
+                            <div><a class="main-button icon-button" href="cadastro.html">Comece a estudar!</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Home -->
+
+		<!-- About -->
+		<div id="about" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="section-header">
+							<h2>Bem-vindo ao Of Course</h2>
+							<p class="lead">Venha conferir o que temos a oferecer!</p>
+						</div>
+
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-desktop"></i>
+							<div class="feature-content">
+								<h4>Cursos Online</h4>
+								<p>Biblioteca variada de cursos de diversas áreas.</p>
+							</div>
+						</div>
+						<!-- /feature -->
+
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-thumbs-o-up"></i>
+							<div class="feature-content">
+								<h4>Sistema de Avaliação de Professores</h4>
+								<p>Dê notas e comentários aos seus professores.</p>
+							</div>
+						</div>
+						<!-- /feature -->
+
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-comments"></i>
+							<div class="feature-content">
+								<h4>Quiz</h4>
+								<p>Sistema de quiz para auxiliar a fixação das aulas.</p>
+							</div>
+						</div>
+						<!-- /feature -->
+						
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-gamepad"></i>
+							<div class="feature-content">
+								<h4>Desafios Semanais</h4>
+								<p>Aprenda jogando e acumule pontos.</p>
+							</div>
+						</div>
+						<!-- /feature -->
+
+					</div>
+
+					<div class="col-md-6">
+						<div class="about-img">
+							<img src="./img/about.png" alt="">
+						</div>
+					</div>
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /About -->
+
+		<!-- Cursos -->
+		<div id="courses" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+					<div class="section-header text-center">
+						<h2>Biblioteca de Cursos</h2>
+						<p class="lead">Veja nossos cursos mais acessados.</p>
+					</div>
+				</div>
+				<!-- /row -->
+
+				<!-- courses -->
+				<div id="courses-wrapper">
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/Cursos/html.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Introdução ao HTML</a>
+								<div class="course-details">
+									<span class="course-category">Desenvolvimento Web</span>
+									<span class="course-price course-free">Grátis</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/Cursos/css.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Introdução ao CSS </a>
+								<div class="course-details">
+									<span class="course-category">Web Design</span>
+									<span class="course-price course-premium">Premium</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/Cursos/logica.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Lógica</a>
+								<div class="course-details">
+									<span class="course-category">Ciência da Computação</span>
+									<span class="course-price course-premium">Premium</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/Cursos/linguagemc1.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Linguagem C</a>
+								<div class="course-details">
+									<span class="course-category">Desenvolvimento</span>
+									<span class="course-price course-free">Grátis</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/course05.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Introdução ao PHP</a>
+								<div class="course-details">
+									<span class="course-category">Desenvolvimento Web</span>
+									<span class="course-price course-free">Grátis</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/Cursos/programacaooo.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Programação Orientada à Objeto</a>
+								<div class="course-details">
+									<span class="course-category">Desenvolvimento</span>
+									<span class="course-price course-free">Grátis</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/Cursos/javascript1.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Introdução ao Javascript</a>
+								<div class="course-details">
+									<span class="course-category">Desenvolvimento</span>
+									<span class="course-price course-free">Grátis</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/Cursos/modelagembd.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Modelagem de Banco de Dados</a>
+								<div class="course-details">
+									<span class="course-category">Ciência da Computação</span>
+									<span class="course-price course-free">Grátis</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+				</div>
+				<!-- /courses -->
+
+				<div class="row">
+					<div class="center-btn">
+						<a class="main-button icon-button" href="todos_cursos.html">Ver Todos os Cursos</a>
+					</div>
+				</div>
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Cursos -->
+
+		<!-- Call To Action -->
+		<div id="cta" class="section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/cta1-background.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<h2 class="white-text">Gostou do que viu?</h2>
+						<p class="lead white-text">Não perca tempo e se cadastre agora!</p>
+						<a class="main-button icon-button" href="#">Cadastro</a>
+					</div>
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Call To Action -->
+
+		<!-- Why us -->
+		<div id="why-us" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+					<div class="section-header text-center">
+						<h2>Por que usar a plataforma?</h2>
+						<p class="lead">Acreditamos em um método de ensino diferente de tudo que você já viu.</p>
+					</div>
+
+					<!-- feature -->
+					<div class="col-md-4">
+						<div class="feature">
+							<i class="feature-icon fa fa-flask"></i>
+							<div class="feature-content">
+								<h4>Cursos</h4>
+								<p>Nossos cursos são feitos com o material utilizado na sua faculdade.</p>
+							</div>
+						</div>
+					</div>
+					<!-- /feature -->
+
+					<!-- feature -->
+					<div class="col-md-4">
+						<div class="feature">
+							<i class="feature-icon fa fa-gamepad"></i>
+							<div class="feature-content">
+								<h4>Desafios</h4>
+								<p>Receba desafios semanais, aprenda e acumule pontos.</p>
+							</div>
+						</div>
+					</div>
+					<!-- /feature -->
+
+					<!-- feature -->
+					<div class="col-md-4">
+						<div class="feature">
+							<i class="feature-icon fa fa-comments"></i>
+							<div class="feature-content">
+								<h4>Quiz</h4>
+								<p>Aprenda respondendo perguntas e ganhe pontos.</p>
+							</div>
+						</div>
+					</div>
+					<!-- /feature -->
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Why us -->
+
+		<!-- Contact CTA -->
+		<div id="contact-cta" class="section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/cta2-background.jpg)"></div>
+			<!-- Backgound Image -->
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<h2 class="white-text">Entre em Contato</h2>
+						<p class="lead white-text"> Elogios, Dúvidas ou Reclamações? Fale com a gente!</p>
+						<a class="main-button icon-button" href="#">Enviar mensagem</a>
+					</div>
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Contact CTA -->
+
+		<!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-6">
+						<div class="footer-logo">
+							<a class="logo" href="index.html">
+								<img src="./logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+					<!-- footer nav -->
+					<div class="col-md-6">
+						<ul class="footer-nav">
+						<li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#courses">Cursos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+                        <li><a href="login.html">Login</a></li>
+						</ul>
+					</div>
+					<!-- /footer nav -->
+
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div id="bottom-footer" class="row">
+
+					<!-- social -->
+					<div class="col-md-4 col-md-push-8">
+						<ul class="footer-social">
+							<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+					<!-- /social -->
+
+					<!-- copyright -->
+					<div class="col-md-8 col-md-pull-4">
+						<div class="footer-copyright">
+							<span>&copy; Copyright 2020. Todos os Direitos Reservados.</span>
+						</div>
+					</div>
+					<!-- /copyright -->
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script type="text/javascript" src="js/google-map.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+	</body>
+</html>

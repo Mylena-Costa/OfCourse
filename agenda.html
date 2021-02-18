@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" href="img/favicon.png" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Drag an event from FullCalendar to trash or back to external list</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.6/fullcalendar.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+
+     <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/inicio_logado.css">
+    <link rel="stylesheet" href="css/agenda.css">
+
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+    <script>
+       function inserirLembrete(){ 
+            document.getElementById("lembra").innerHTML="<input type='text' id='novoLembrete' placeholder='ex:Exercício de matemática'><input type='button' id='lembrete' value='Salvar Lembrete' onclick='salvarLembrete()'/>";
+       }
+        function salvarLembrete(){
+        var antigoLembrete= document.getElementById("external-events-listing").innerHTML;    
+        var lembrete = document.getElementById("novoLembrete").value;
+        document.getElementById("lembra").innerHTML="<input type='button' id='lembrete' value='Inserir novo lembrete' onclick='inserirLembrete()'/>";
+        document.getElementById("mensagem").innerHTML="Arraste seu lembrete para o calendário para adicioná-lo a agenda."
+        document.getElementById("external-events-listing").innerHTML=antigoLembrete+"<div class='fc-event' onclick='makeEventsDraggable()'>"+lembrete+"</div>";   
+       }
+    </script>
+</head>
+<body>
+     <div class="wrapper" style="top=500 px;">
+        <!-- Sidebar Holder -->
+         <nav id="sidebar">
+            <div class="sidebar-header">
+				<a href="inicio_logado.html"><img style="width: 80%; margin-left: 10%"  src="./img/logo-alt.png"></a>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+				<li class="active"><a href="inicio_logado.html">Início</a></li>
+				<li>
+                    <a href="meu_perfil_logado.html">Meu Perfil</a>
+				</li>
+                <li>
+                    <a href="meuscursos_logado.html">Meus Cursos</a>
+				</li>
+				
+				<li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Avaliar</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="avaliar_disciplinas.html">Disciplinas</a>
+                        </li>
+                        <li>
+                            <a href="avaliar_professores.html">Professores</a>
+                        </li>
+                    </ul>
+                </li>
+				
+                <li>
+                    <a href="quiz.html">Quiz</a>
+                </li>
+				
+                <li>
+                    <a href="desafios.html">Desafios</a>
+                </li>
+				
+            </ul>
+
+        </nav>
+
+
+        <!-- Page Content Holder -->
+   <div id="content">	
+       <div id='wrap'>
+           <br>
+<div id='external-events'>
+<img src="img/logo.png" width="100%"><h3>Lembretes</h3>
+<h4 id="mensagem">Arraste seu lembrete para o calendário para adicioná-lo a agenda.</h4>
+<div id='external-events-listing'>
+<div class='fc-event'>Aula da Nathielly </div>    
+        <div class='fc-event'>Exercício de IA</div>    
+        <div class='fc-event'>Quiz de Excel</div>
+</div>
+<p>
+    <input type='checkbox' id='drop-remove' checked='checked' />
+    <label for='drop-remove'>Retirar lembrete da lista após ser usado.</label>
+</p>
+            <p id="lembra">
+            <input type='button' id='lembrete' value='Inserir novo lembrete' onclick="inserirLembrete()"/>
+            </p>
+</div>
+<div id='calendar'></div>
+<div style='clear:both'></div>
+</div>
+                  
+			</div>
+             
+         </div>   
+		
+        
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
+<script src='https://code.jquery.com/ui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
+<script src='js/calendar.js'></script>
+<script id="rendered-js">
+    function inserirLembrete(){ 
+            document.getElementById("lembra").innerHTML="<input type='text' id='novoLembrete' placeholder='ex:Exercício de matemática'><input type='button' id='lembrete' value='Salvar Lembrete' onclick='salvarLembrete()'/>";
+       }
+        function salvarLembrete(){
+        var antigoLembrete= document.getElementById("external-events-listing").innerHTML;    
+        var lembrete = document.getElementById("novoLembrete").value;
+        document.getElementById("lembra").innerHTML="<input type='button' id='lembrete' value='Inserir novo lembrete' onclick='inserirLembrete()'/>";
+        document.getElementById("mensagem").innerHTML="Arraste seu lembrete para o calendário para adicioná-lo a agenda."
+        document.getElementById("external-events-listing").innerHTML=antigoLembrete+"<div class='fc-event' onclick='makeEventsDraggable()'>"+lembrete+"</div>";   
+       }
+function makeEventsDraggable() {
+  $(".fc-draggable").draggable({
+    zIndex: 999,
+    revert: true, // will cause the event to go back to its
+    revertDuration: false //  original position after the drag
+  });
+}
+
+$(document).ready(function () {
+
+  var dragged = null;
+
+  /* initialize the external events
+                      -----------------------------------------------------------------*/
+
+  $('#external-events .fc-event').each(function () {
+
+    // store data so the calendar knows to render an event upon drop
+    $(this).data('event', {
+      title: $.trim($(this).text()), // use the element's text as the event title
+      stick: true // maintain when user navigates (see docs on the renderEvent method)
+    });
+
+    // make the event draggable using jQuery UI
+    $(this).draggable({
+      zIndex: 999,
+      revert: true, // will cause the event to go back to its
+      revertDuration: 0 //  original position after the drag
+    });
+      
+       $(this).draggable({
+      zIndex: 999,
+      revert: true, // will cause the event to go back to its
+      revertDuration: 0 //  original position after the drag
+    });
+      
+  });
+
+
+  /* initialize the calendar
+      -----------------------------------------------------------------*/
+
+  var calendar = $('#calendar').fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay' },
+
+    editable: true,
+    droppable: true, // this allows things to be dropped onto the calendar
+    dragRevertDuration: 0,
+    drop: function () {
+      makeEventsDraggable();
+      // is the "remove after drop" checkbox checked?
+      if ($('#drop-remove').is(':checked')) {
+        // if so, remove the element from the "Draggable Events" list
+        $(this).remove();
+      }
+    },
+    eventDragStop: function (event, jsEvent, ui, view) {
+      makeEventsDraggable();
+    },
+    eventResize: function (event, delta, revertFunc, jsEvent, ui, view) {
+      makeEventsDraggable();
+    },
+    viewRender: function () {
+      makeEventsDraggable();
+    },
+    eventDragStart: function (event, jsEvent, ui, view) {
+      dragged = [calendar, event];
+    } });
+
+
+
+  /* Make external-events droppable
+          -----------------------------------------------------------------*/
+  $('#external-events-listing').droppable({
+    drop: function (event, ui) {
+      if (dragged) {
+        var event = dragged[1];
+        dragged[0].fullCalendar('removeEvents', event._id);
+        var el = $("<div class='fc-event'>").appendTo(this).text(event.title);
+        el.draggable({
+          zIndex: 999,
+          revert: true,
+          revertDuration: 0 });
+
+        el.data('event', { title: event.title, id: event.id, stick: true });
+        dragged = null;
+        makeEventsDraggable();
+      }
+    } });
+
+
+
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+      <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<title>Vídeos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<!-- Fonte Awesome Icon -->
+    <link rel="shortcut icon" href="img/favicon.png" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Personalização -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+        <link rel="stylesheet" href="css/video.css">    
+
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+    
+</head>
+<body translate="no">
+    
+    <div id="video-container" style=" background-color: #404040 ;background-image:url(./img/video-background.png);background-repeat: no-repeat;background-position: center">
+        <iframe id="video-player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <div id="landscape-tab"> 
+        <div class="button_container" id="toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+    </div>
+
+    </div>
+        <div id="portrait-tab">
+        <div class="button_container" id="toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+    </div></div>
+        
+
+    </div>
+    <div id="video-list" style="background: transparent;">
+        
+        <div class="video-list-header">
+            Menu
+        </div>
+       
+        <span style="overflow: hidden auto;" class="video-list-item-title"><a class="main-button icon-button" href="inicio_logado.html">Voltar ao início</a></span>
+               <span style="overflow: hidden auto;" class="video-list-item-title"> <div class="FABMenu">
+  <input type="checkbox" checked/>
+  <div class="hamburger">
+    <div class="dots">
+      <span class="first"></span>
+      <span class="second"></span>
+      <span class="third"></span>
+    </div>
+  </div>
+  <div class="action_items_bar">
+    <div class="action_items">
+      <span class="first_item">
+        <i class="material-icons">
+        favorite
+        </i>
+      </span>
+      <span class="second_item">
+        <i class="material-icons">
+        chat
+        </i>
+      </span>
+      <span class="third_item">
+        <i class="material-icons">
+        get_app
+        </i>
+      </span>
+      <span class="fourth_item">
+        <i class="material-icons">
+        share
+        </i>
+      </span>
+    </div>
+  </div>
+</div></span>
+        
+        
+       <div class="video-list-header">Inteligência Artificial</div>
+        
+        
+        <a class="video-list-item" src="https://www.youtube.com/embed/vdD11g4rw5w">
+            <div class="video-list-item-thumbnail">
+                <img src="img/play.png"/>
+            </div>
+            <span class="video-list-item-title">Algoritmos Genéticos</span>
+        </a>
+        
+        <a class="video-list-item" src="https://www.youtube.com/embed/bka0mZZOjKI">
+            <div class="video-list-item-thumbnail">
+                <img src="img/play.png"/>
+            </div>
+            <span class="video-list-item-title">Programação Genética</span>
+        </a>
+        
+        <a class="video-list-item" src="https://www.youtube.com/embed/hip98UGOX8g">
+            <div class="video-list-item-thumbnail">
+                <img src="img/play.png"/>
+            </div>
+            <span class="video-list-item-title">Redes Neurais</span>
+            
+        </a>
+        
+        <a class="video-list-item" src="https://www.youtube.com/embed/OprkSBeScv4">
+            <div class="video-list-item-thumbnail">
+                <img src="img/play.png"/>
+            </div>
+            <span class="video-list-item-title">Árvore de Decisão</span>
+        </a>
+        
+        <a class="video-list-item" src="https://www.youtube.com/embed/8aPI0gfDKJg">
+            <div class="video-list-item-thumbnail">
+                <img src="img/play.png"/>
+            </div>
+            <span class="video-list-item-title">Regras Se Então</span>
+        </a>
+        
+        <a class="video-list-item" src="https://www.youtube.com/embed/ToB9HeJF0PU">
+            <div class="video-list-item-thumbnail">
+                <img src="img/play.png"/>
+            </div>
+            <span class="video-list-item-title">Sistema Especialista</span>
+        </a>
+        
+    
+    </div>
+    
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script id="rendered-js">
+let videoPlayer = document.getElementById('video-player');
+
+for (let videoListItem of document.querySelectorAll('.video-list-item')) {
+  videoListItem.addEventListener('click', evt => {
+    evt.preventDefault();
+    videoPlayer.src = videoListItem.getAttribute('src');
+  });
+}
+
+let landscapeTab = document.getElementById('landscape-tab');
+let portraitTab = document.getElementById('portrait-tab');
+let toggleListFn = evt => {
+  document.body.classList.toggle('hide-list');
+  if (document.body.classList.contains('hide-list')) {
+    landscapeTab.textContent = '←';
+    portraitTab.textContent = '↑';
+  } else {
+    landscapeTab.textContent = '→';
+    portraitTab.textContent = '↓';
+  }
+};
+
+landscapeTab.addEventListener('click', toggleListFn);
+portraitTab.addEventListener('click', toggleListFn);
+//# sourceURL=pen.js
+    </script>
+    
+    
+</body>
+</html>
